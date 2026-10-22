@@ -12,6 +12,7 @@ Skills for AI agents, in the [Agent Skills](https://agentskills.io) format. Each
 | [`safe-refactoring`](skills/safe-refactoring/SKILL.md) | Restructures code without changing behavior: pins current behavior with characterization tests, moves in small verified steps, and checks for silent changes (defaults, exception types, ordering, side effects). |
 | [`dependency-upgrade`](skills/dependency-upgrade/SKILL.md) | Upgrades packages and runtimes safely: baseline first, changelog and breaking-change search, one package at a time with the project's own package manager, and test results compared to the baseline. |
 | [`verification-before-completion`](skills/verification-before-completion/SKILL.md) | No "done", "fixed", or "passing" without fresh evidence from a command run after the last change. Covers tests, builds, bug fixes, requirements, and subagent reports. |
+| [`dom-text-rendering`](skills/dom-text-rendering/SKILL.md) | Puts text and symbols into a web page so they render correctly and safely: literal characters instead of HTML entities in script, text APIs for data, and HTML parsing only for trusted markup. Includes a read-only scanner for entity leaks and risky innerHTML.
 | [`webapp-testing`](skills/webapp-testing/SKILL.md) | Tests local web apps with Playwright: starts dev servers, waits for real rendering, discovers selectors, captures screenshots and console errors. Includes a server helper that cleans up after itself. |
 
 ### Operations and business
