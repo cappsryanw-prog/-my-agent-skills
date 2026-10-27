@@ -26,6 +26,10 @@ Skills for AI agents, in the [Agent Skills](https://agentskills.io) format. Each
 | [`sop-writer`](skills/sop-writer/SKILL.md) | Turns a brain dump or call notes into a standard operating procedure a new person can follow: trigger, owner, verb-first steps, if/then decisions, a "when something goes wrong" table, and visible TBDs instead of invented details. |
 | [`spreadsheet-cleanup`](skills/spreadsheet-cleanup/SKILL.md) | Cleans messy CSV/Excel exports with a script that never overwrites the original: whitespace, empty rows, duplicates, mixed date formats, and money stored as text, with guards for ZIP codes and IDs and a report of everything it changed or wasn't sure about. |
 
+### Anthropic example skills (vendored)
+
+Thirteen open-source skills from [anthropics/skills](https://github.com/anthropics/skills) are kept unmodified in [`vendor/anthropic/`](vendor/anthropic/README.md). They include `skill-creator`, `mcp-builder`, `frontend-design`, `web-artifacts-builder`, and `claude-api`. They don't follow this repo's house style. See that folder's README for the full list and what each one does.
+
 ## Install
 
 Any agent supported by the [skills CLI](https://github.com/vercel-labs/skills) (Claude Code, Cursor, Codex, Copilot, and more):
@@ -33,6 +37,8 @@ Any agent supported by the [skills CLI](https://github.com/vercel-labs/skills) (
 ```bash
 npx skills add cappsryanw-prog/-my-agent-skills
 ```
+
+That installs the skills in `skills/` only. To include the vendored Anthropic skills too, add `--full-depth`.
 
 **Claude Code, manually:** copy a skill folder (for example `skills/safe-refactoring/`) into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
 
@@ -48,5 +54,7 @@ Some skills are adapted from other open-source collections. Their original licen
 - `systematic-debugging`, from [obra/superpowers](https://github.com/obra/superpowers) by Jesse Vincent. MIT License. Supporting techniques were condensed into `references/` and examples rewritten.
 - `webapp-testing`, from [anthropics/skills](https://github.com/anthropics/skills). Apache License 2.0, full text in [`skills/webapp-testing/LICENSE.txt`](skills/webapp-testing/LICENSE.txt). The server helper was rewritten to fix output-buffer hangs and orphaned child processes, and the examples were made portable. Each modified file notes its changes.
 - `test-driven-development`, from [obra/superpowers](https://github.com/obra/superpowers) by Jesse Vincent. MIT License. Testing guidance was condensed into `references/` and examples rewritten.
+
+- Everything in `vendor/anthropic/`, from [anthropics/skills](https://github.com/anthropics/skills) at commit `dbd4588`. Apache License 2.0, full text in each skill's `LICENSE.txt`, with bundled third-party components listed in [`vendor/anthropic/THIRD_PARTY_NOTICES.md`](vendor/anthropic/THIRD_PARTY_NOTICES.md). These are unmodified.
 
 Everything else is original to this repository and released under the [MIT License](LICENSE).
