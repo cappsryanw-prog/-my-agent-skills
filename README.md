@@ -25,6 +25,7 @@ Skills for AI agents, in the [Agent Skills](https://agentskills.io) format. Each
 |---|---|
 | [`sop-writer`](skills/sop-writer/SKILL.md) | Turns a brain dump or call notes into a standard operating procedure a new person can follow: trigger, owner, verb-first steps, if/then decisions, a "when something goes wrong" table, and visible TBDs instead of invented details. |
 | [`spreadsheet-cleanup`](skills/spreadsheet-cleanup/SKILL.md) | Cleans messy CSV/Excel exports with a script that never overwrites the original: whitespace, empty rows, duplicates, mixed date formats, and money stored as text, with guards for ZIP codes and IDs and a report of everything it changed or wasn't sure about. |
+| [`data-storyteller`](skills/data-storyteller/SKILL.md) | Turns a CSV, Excel, or JSON export into a short, plain-English story with the key numbers, what changed, and what looks wrong. It audits data quality first, then runs only the scripts the question needs (pivots, outliers, trends, comparisons, statistics, budgets, surveys, A/B tests, ROI). |
 
 ### Anthropic example skills (vendored)
 
